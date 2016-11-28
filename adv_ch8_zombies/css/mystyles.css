@@ -1,0 +1,83 @@
+section{
+    margin-bottom: 50px;
+}
+#s1 div{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin: 20px 20px;
+    background: blue;
+    transition: background-color 2s linear, border-radius 2s ease-in, transform 2s ease-out;
+}
+#s1 div:hover{
+    background-color:yellow;
+    border-radius: 50%;
+    transform: scale(2.5);
+}
+#s1 p{
+    color: rgba(255,0,0,0);
+    transition: color 1s linear;
+    margin: auto auto;
+    width: 50%;
+    border: 1px solid red;
+    padding: 10px 10px;
+}
+#s1 p:hover{
+    color: rgba(255,0,0,1);
+}
+#s2 button{
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 5px -4px 0 #ccc;
+    cursor: pointer;
+    transition: all .1s linear;
+    outline: 0;
+    border: none;
+}
+
+#s2 button:active{
+    box-shadow: 0 0 0 #ccc;
+    transform: translateY(4px) translateX(-2px);
+}
+
+.card-container {
+    cursor: pointer;
+    perspective: 600px;
+    position: relative;
+
+    width: 50px;
+    height: 75px;
+}
+.card {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+    transform-origin: center center;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.card .side {
+    backface-visibility: hidden;
+    border-radius: 6px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+.card .back {
+    color: #0087cc;
+    line-height: 150px;
+    text-align: center;
+    transform: rotateY(180deg) translateX(25%);
+    transform-origin:center center;
+}
+

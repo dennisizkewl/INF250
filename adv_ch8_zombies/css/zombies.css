@@ -1,0 +1,287 @@
+
+#graveyard{
+    background-color: #555;
+    color: white;
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    border: 5px gray;
+    z-index:0;
+}
+header{
+    width: 40%;
+    margin: auto auto;
+    position:relative;
+    height: 125px;
+    padding: 0px;
+    background-image: url("../images/diamond_plate.jpg");
+    animation-name: hingeSwing;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: top left;
+    z-index: 6;
+    padding: 10px;
+}
+header img{
+    position:absolute;
+}
+header img:first-of-type{
+    top: 10px;
+    left: 10px;
+}
+header img:nth-of-type(2){
+    top: 10px;
+    right: 10px;
+}
+header img:nth-of-type(3){
+    bottom: 10px;
+    right: 10px;
+}
+header img:nth-of-type(4){
+    bottom: 10px;
+    left: 10px;
+}
+
+h1{
+    background-position: top left;
+    text-align: center;
+    border: 1px solid green;
+    position: absolute;
+    margin: 0;
+    font-family: "Chiller", "sans-serif";
+    color:red;
+    font-size: 6em;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.grave
+{
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+}
+.zombie{
+    position:absolute;
+    z-index: 1;
+}
+
+#graveyard img:nth-child(7){
+    width: 65px;
+    height: 75px;
+    position:absolute;
+    left: -65px;
+    top:-75px;
+    animation: witchFly 10s infinite;
+    background: url("../images/flying_witch.gif") -65px -75px;
+    transition: background-position 0s;
+}
+
+#graveyard img.grave:first-of-type{
+    top: 250px;
+    left: 250px;
+
+}
+#graveyard img.grave:nth-of-type(2){
+    top: 150px;
+    left: 650px;
+
+}
+#graveyard img.grave:nth-of-type(3){
+    top: 50px;
+    left: 50px;
+
+}
+#graveyard img.zombie:nth-child(4){
+    top: 250px;
+    left: 250px;
+    z-index: 1;
+
+}
+
+#graveyard:hover img.zombie:nth-child(4){
+    animation-name: zombieSlideRight;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+#graveyard img.zombie:nth-child(5){
+    top: 150px;
+    left: 650px;
+    z-index: -1;
+
+}
+#graveyard:hover img.zombie:nth-child(5){
+    animation-name: zombieSlideLeft;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+#graveyard img.zombie:nth-child(6){
+    top: 50px;
+    left: 35px;
+    z-index: -1;
+
+}
+#graveyard:hover img.zombie:nth-child(6){
+    animation-name: zombieSlideUp;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 7s;
+}
+
+@keyframes zombieSlideRight{
+    0%{
+        left: 250px;
+    }
+    10%{
+        left: 350px;
+    }
+    20%{
+        left: 350px;
+    }
+    30%{
+        left: 250px;
+    }
+
+    100%{
+        left: 250px;
+    }
+}
+
+@keyframes zombieSlideUp{
+    0%{
+        top: 50px;
+    }
+    10%{
+        top: 0px;
+    }
+    20%{
+        top: 0px;
+    }
+    30%{
+        top: 50px;
+    }
+
+    100%{
+        top: 50px;
+    }
+}
+
+@keyframes zombieSlideLeft{
+    0%{
+        left: 650px;
+    }
+    10%{
+        left: 600px;
+    }
+    20%{
+        left: 600px;
+    }
+    30%{
+        left: 650px;
+    }
+
+    100%{
+        left: 650px;
+    }
+}
+@keyframes witchSprite{
+    0%{
+        background-position-x: 0;
+    }
+    10%{
+              background-position-x: -65px;
+          }
+    20%{
+        background-position-x: -130px;
+    }
+    30%{
+        background-position-x: -195px;
+    }
+    40%{
+        background-position-x: -260px;
+    }
+    50%{
+        background-position-x: -325px;
+    }
+    60%{
+        background-position-x: -390px;
+    }
+    70%{
+        background-position-x: -455px;
+    }
+    80%
+    {
+        background-position-x: -520px;
+    }
+    90%{
+        background-position-x:-585px;
+    }
+    100%{
+        background-position-x: -650px;
+    }
+}
+@keyframes witchFly {
+    0%{
+        top: -75px;
+        left: -65px;
+        transform: rotateY(0deg);
+
+    }
+    25%{
+        top: 220px;
+        left: 375px;
+    }
+    49.9%{
+        transform: rotateY(0deg);
+        top: -75px;
+        left: 820px;
+    }
+    50%{
+        top: -75px;
+        left: 820px;
+        transform: rotateY(180deg);
+    }
+    75%{
+        top: 220px;
+        left: 375px;
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(180deg);
+        top: -75px;
+        left: -65px;
+    }
+
+}
+
+@keyframes hingeSwing{
+    0%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(100deg);
+    }
+    45%{
+        transform: rotate(80deg);
+    }
+    60%{transform: rotate(95deg);
+    }
+    75%{
+        transform: rotate(85deg);
+    }
+    80%{
+        transform: rotate(92.5deg);
+    }
+    90%{
+        transform: rotate(87.5deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
